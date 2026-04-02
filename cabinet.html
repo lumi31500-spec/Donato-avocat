@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Cabinet — Maître Sophie DONATO, Avocat Droit Routier Marseille</title>
+<meta name="description" content="Découvrez le cabinet de Maître Sophie DONATO, avocate spécialisée en droit routier au Barreau de Marseille. Présentation, formation, valeurs.">
+<link rel="stylesheet" href="style.css">
+<style>
+.cabinet-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
+.cab-photo { position: relative; }
+.cab-img { width: 100%; aspect-ratio: 3/4; background: linear-gradient(155deg,#d8d2c8,#bfb9b0); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; }
+.cab-img svg { opacity: .22; }
+.cab-img-note { font-style: italic; color: rgba(0,0,0,.28); font-size: .82rem; font-family: var(--fd); text-align: center; padding: 0 2rem; }
+.cab-cadre { position: absolute; top: 1.5rem; left: 1.5rem; right: -1.5rem; bottom: -1.5rem; border: 1.5px solid var(--or); z-index: -1; }
+.cab-badge { position: absolute; bottom: -1.5rem; right: -1.5rem; background: var(--marine); padding: 1rem 1.5rem; text-align: center; }
+.cb-t { font-family: var(--fd); font-size: .82rem; font-weight: 600; color: var(--blanc); display: block; }
+.cb-s { font-size: .62rem; color: var(--or); text-transform: uppercase; letter-spacing: .14em; margin-top: 3px; display: block; }
+.cab-right blockquote { font-family: var(--fd); font-style: italic; font-size: 1.4rem; color: var(--marine); border-left: 3px solid var(--or); padding-left: 1.5rem; margin: 2rem 0; line-height: 1.55; }
+.cab-p { color: var(--doux); line-height: 1.88; margin-bottom: 1.1rem; }
+.cab-vals { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-top: 1.5rem; }
+.cv { display: flex; align-items: flex-start; gap: 9px; }
+.cv svg { width: 14px; height: 14px; stroke: var(--or); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 5px; }
+.cv span { font-size: .86rem; color: var(--texte); }
+.parcours { background: var(--creme); }
+.parcours-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 3rem; }
+.parc-card { background: var(--blanc); padding: 2rem; border-top: 2px solid transparent; transition: border-color .25s; }
+.parc-card:hover { border-top-color: var(--or); }
+.parc-annee { font-family: var(--fd); font-size: 1.6rem; font-weight: 600; color: var(--or); }
+.parc-titre { font-weight: 700; font-size: .9rem; color: var(--marine); margin: .4rem 0; }
+.parc-desc { font-size: .84rem; color: var(--doux); line-height: 1.7; }
+@media(max-width:1040px){ .cabinet-grid{grid-template-columns:1fr;gap:3rem;} .cab-cadre{display:none;} .cab-badge{position:static;display:inline-block;margin-top:1rem;} .parcours-grid{grid-template-columns:1fr 1fr;} .cab-vals{grid-template-columns:1fr;} }
+@media(max-width:640px){ .parcours-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo"><span class="logo-t">Maître Sophie DONATO</span><span class="logo-s">Avocat Droit Routier — Marseille</span></a>
+  <div class="burger" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></div>
+  <nav id="nav">
+    <a href="index.html">Accueil</a><a href="infractions.html">Infractions</a><a href="permis.html">Permis</a><a href="cabinet.html" class="active">Cabinet</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a>
+    <a href="tel:+33XXXXXXXXX" class="nav-tel"><svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>04 XX XX XX XX</a>
+    <a href="contact.html" class="nav-cta">Consultation gratuite</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Le Cabinet</span></div>
+    <p class="s-lbl">À propos</p>
+    <h1 class="s-t">Le <em>Cabinet</em></h1>
+    <p>Un cabinet à taille humaine, entièrement dédié à la défense des conducteurs. Rigueur technique, écoute et engagement personnel sur chaque dossier.</p>
+  </div>
+</div>
+
+<section>
+  <div class="cabinet-grid">
+    <div class="cab-photo">
+      <div class="cab-img">
+        <svg width="72" height="72" viewBox="0 0 24 24" fill="#1A1A2E"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        <p class="cab-img-note">Votre photo professionnelle</p>
+      </div>
+      <div class="cab-cadre"></div>
+      <div class="cab-badge"><span class="cb-t">Barreau de Marseille</span><span class="cb-s">Avocat inscrit — Droit routier</span></div>
+    </div>
+    <div class="cab-right reveal">
+      <p class="s-lbl">Maître Sophie DONATO</p>
+      <h2 class="s-t">Avocate spécialisée<br>en <em>droit routier</em></h2>
+      <blockquote>"Perdre son permis, c'est parfois perdre son travail. Je me bats pour que ça n'arrive pas."</blockquote>
+      <p class="cab-p">Inscrite au Barreau de Marseille, Maître Sophie DONATO s'est spécialisée en droit routier — un domaine technique qui articule le droit pénal et le droit administratif autour des infractions au code de la route.</p>
+      <p class="cab-p">Formée à [Université / École des Avocats de la région Sud], elle a développé une expertise approfondie des procédures de verbalisation, des techniques de contrôle d'alcoolémie et de dépistage, et des règles régissant les retraits de points. Cette connaissance lui permet de déceler les nullités et vices de procédure susceptibles de changer l'issue d'un dossier.</p>
+      <p class="cab-p">Le cabinet intervient devant le Tribunal correctionnel de Marseille, le Tribunal de police, les juridictions administratives (Tribunal administratif de Marseille, Cour administrative d'appel de Marseille) et toutes les juridictions de la région PACA.</p>
+      <div class="cab-vals">
+        <div class="cv"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Double compétence pénal &amp; administratif</span></div>
+        <div class="cv"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Analyse gratuite de votre dossier</span></div>
+        <div class="cv"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Réponse garantie sous 24h</span></div>
+        <div class="cv"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Recherche systématique des nullités</span></div>
+        <div class="cv"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Secret professionnel absolu</span></div>
+        <div class="cv"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Intervention PACA &amp; national</span></div>
+      </div>
+      <a href="contact.html" class="btn-marine" style="margin-top:2rem">Prendre rendez-vous <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="parcours">
+  <p class="s-lbl">Parcours</p>
+  <h2 class="s-t">Formation &amp; <em>expérience</em></h2>
+  <div class="parcours-grid">
+    <div class="parc-card reveal"><div class="parc-annee">[Année]</div><div class="parc-titre">Diplôme de Droit</div><p class="parc-desc">[Université — à compléter]. Spécialisation en droit pénal et procédures.</p></div>
+    <div class="parc-card reveal"><div class="parc-annee">[Année]</div><div class="parc-titre">Prestation de serment</div><p class="parc-desc">Inscription au Barreau de Marseille après obtention du CAPA à l'École des Avocats de la région Sud.</p></div>
+    <div class="parc-card reveal"><div class="parc-annee">[Année]</div><div class="parc-titre">Spécialisation droit routier</div><p class="parc-desc">Développement d'une pratique exclusive en droit routier, pénal et administratif. Formation continue en contentieux du permis de conduire.</p></div>
+    <div class="parc-card reveal"><div class="parc-annee">[Année]</div><div class="parc-titre">Ouverture du cabinet</div><p class="parc-desc">Installation dans le 6e arrondissement de Marseille. Cabinet dédié au droit routier et à la défense des conducteurs.</p></div>
+    <div class="parc-card reveal"><div class="parc-annee">Aujourd'hui</div><div class="parc-titre">Pratique &amp; résultats</div><p class="parc-desc">Des centaines de dossiers traités, des permis sauvegardés, une présence constante devant les juridictions marseillaises et régionales.</p></div>
+    <div class="parc-card reveal" style="background:var(--marine)">
+      <div class="parc-annee" style="color:var(--or)">[X]</div>
+      <div class="parc-titre" style="color:var(--blanc)">Permis défendus</div>
+      <p class="parc-desc" style="color:rgba(255,255,255,.5)">Chaque dossier est traité personnellement avec la même exigence de rigueur et d'engagement.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div><p class="cta-band-t">Rencontrons-nous<br>pour une <em>consultation gratuite</em>.</p><p class="cta-band-sub">Disponible du lundi au vendredi, 9h–18h30.</p></div>
+  <div class="cta-band-a">
+    <a href="tel:+33XXXXXXXXX" class="tel-big"><svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>04 XX XX XX XX</a>
+    <a href="contact.html" class="btn-or">Prendre rendez-vous</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="logo-t">Maître Sophie DONATO</span><span class="logo-s">Avocat Droit Routier — Barreau de Marseille</span><p>Spécialisée en droit routier à Marseille et dans toute la région PACA.</p></div>
+    <div class="footer-col"><h4>Pages</h4><a href="index.html">Accueil</a><a href="infractions.html">Infractions</a><a href="permis.html">Permis</a><a href="cabinet.html">Cabinet</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Infractions</h4><a href="infractions.html#alcool">Alcool au volant</a><a href="infractions.html#stupefiants">Stupéfiants</a><a href="infractions.html#vitesse">Excès de vitesse</a><a href="infractions.html#accident">Accident / fuite</a></div>
+    <div class="footer-col"><h4>Contact</h4><p>[Adresse] 13006 Marseille</p><a href="tel:+33XXXXXXXXX">04 XX XX XX XX</a><a href="mailto:contact@donato-avocat.fr">contact@donato-avocat.fr</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 Maître Sophie DONATO — Avocat au Barreau de Marseille</div>
+    <div class="footer-legal"><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

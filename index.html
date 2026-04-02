@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maître Sophie DONATO – Avocat Droit Routier Marseille</title>
+<meta name="description" content="Maître Sophie DONATO, avocate spécialisée en droit routier à Marseille (13006). Défense permis, alcool, excès de vitesse, stupéfiants. Consultation gratuite.">
+<link rel="stylesheet" href="style.css">
+<style>
+/* ── HERO ACCUEIL ── */
+.hero {
+  position: relative; min-height: calc(100vh - 76px);
+  display: flex; align-items: center; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80&auto=format&fit=crop');
+  background-size: cover; background-position: center 30%;
+  filter: brightness(.32) saturate(.7);
+}
+/* fallback si l'image ne charge pas */
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, #1A1A2E 0%, #243352 100%);
+  z-index: -1;
+}
+.hero-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(90deg, rgba(26,26,46,.85) 40%, rgba(26,26,46,.3) 100%);
+}
+.hero-grille {
+  position: absolute; inset: 0; z-index: 1;
+  background: repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(201,168,76,.04) 60px),
+              repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(201,168,76,.04) 60px);
+  pointer-events: none;
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  padding: 5rem 8%; max-width: 760px;
+}
+
+/* tag anthracite (ex rouge) */
+.hero-alerte {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(74,74,74,.25); border: 1px solid rgba(74,74,74,.5);
+  color: #c8c8c8; font-size: .7rem; letter-spacing: .18em; text-transform: uppercase;
+  padding: 7px 16px; margin-bottom: 2.2rem; width: fit-content;
+  backdrop-filter: blur(4px);
+}
+.hero-alerte svg { width: 12px; height: 12px; stroke: #c8c8c8; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+
+.hero h1 {
+  font-family: var(--fd); font-size: clamp(2.8rem,5.5vw,5rem);
+  font-weight: 400; color: var(--blanc); line-height: 1.1; margin-bottom: 1.5rem;
+}
+.hero h1 em { font-style: italic; color: var(--or); }
+.hero-sub { font-size: 1.08rem; color: rgba(255,255,255,.62); max-width: 520px; margin-bottom: 2.8rem; font-weight: 300; line-height: 1.85; }
+
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3.5rem; }
+
+/* Tags infractions */
+.hero-tags { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 3.5rem; }
+.hero-tag {
+  border: 1px solid rgba(201,168,76,.22); color: rgba(255,255,255,.48);
+  font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; padding: 5px 12px;
+  display: flex; align-items: center; gap: 6px; backdrop-filter: blur(2px);
+}
+.hero-tag svg { width: 10px; height: 10px; stroke: var(--or); fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.5; }
+
+/* Chiffres */
+.hero-stats {
+  display: flex; gap: 2.5rem; padding-top: 2.5rem;
+  border-top: 1px solid rgba(255,255,255,.1);
+}
+.stat-nb { font-family: var(--fd); font-size: 2.4rem; font-weight: 600; color: var(--or); line-height: 1; display: flex; align-items: center; gap: 5px; }
+.stat-nb svg { width: 20px; height: 20px; fill: var(--or); }
+.stat-lbl { font-size: .68rem; color: rgba(255,255,255,.42); text-transform: uppercase; letter-spacing: .1em; margin-top: 4px; }
+
+/* Encadré bas droite */
+.hero-card {
+  position: absolute; bottom: 3rem; right: 8%; z-index: 2;
+  background: rgba(26,26,46,.88); border: 1px solid rgba(201,168,76,.28);
+  padding: 1.3rem 1.6rem; max-width: 240px; backdrop-filter: blur(8px);
+}
+.hero-card-t { font-size: .62rem; text-transform: uppercase; letter-spacing: .14em; color: var(--or); margin-bottom: 5px; }
+.hero-card-v { font-family: var(--fd); font-size: 1.4rem; color: var(--blanc); font-weight: 600; }
+.hero-card-s { font-size: .72rem; color: rgba(255,255,255,.45); margin-top: 3px; line-height: 1.5; }
+
+/* ── SERVICES RAPIDES ── */
+.rapides { background: var(--creme); padding: 5rem 8%; }
+.rapides-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5px; margin-top: 3rem; }
+.rapid-card {
+  background: var(--blanc); padding: 2rem 1.8rem;
+  text-decoration: none; display: flex; flex-direction: column; color: inherit;
+  border-bottom: 2px solid transparent; transition: border-color .25s, background .25s, transform .2s;
+}
+.rapid-card:hover { border-bottom-color: var(--or); background: var(--marine); transform: translateY(-3px); }
+.rapid-card:hover .ic-box svg { stroke: var(--or); }
+.rapid-card:hover .ic-box { border-color: rgba(201,168,76,.3); }
+.rapid-card:hover .rc-titre { color: var(--blanc); }
+.rapid-card:hover .rc-desc { color: rgba(255,255,255,.5); }
+.rapid-card:hover .rc-lien { color: var(--or); }
+.rc-titre { font-family: var(--fd); font-size: 1.2rem; font-weight: 600; color: var(--marine); margin-bottom: .6rem; transition: color .25s; }
+.rc-desc { font-size: .85rem; color: var(--doux); line-height: 1.7; margin-bottom: 1.2rem; flex: 1; transition: color .25s; }
+.rc-lien { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--marine); font-weight: 700; display: flex; align-items: center; gap: 5px; transition: color .25s; }
+.rc-lien svg { width: 11px; height: 11px; stroke: currentColor; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.5; }
+
+/* ── CABINET APERÇU ── */
+.apercu { background: var(--blanc); }
+.apercu-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 6rem; align-items: center; }
+.apercu-photo {
+  position: relative;
+}
+.apercu-img {
+  width: 100%; aspect-ratio: 3/4;
+  background: linear-gradient(155deg,#d8d2c8,#bfb9b0);
+  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem;
+}
+.apercu-img svg { opacity: .22; }
+.apercu-img-note { font-style: italic; color: rgba(0,0,0,.28); font-size: .82rem; font-family: var(--fd); text-align: center; padding: 0 2rem; }
+.apercu-cadre { position: absolute; top: 1.5rem; left: 1.5rem; right: -1.5rem; bottom: -1.5rem; border: 1.5px solid var(--or); z-index: -1; }
+.apercu-badge {
+  position: absolute; bottom: -1.5rem; right: -1.5rem;
+  background: var(--marine); padding: 1rem 1.5rem; text-align: center;
+}
+.ab-t { font-family: var(--fd); font-size: .82rem; font-weight: 600; color: var(--blanc); display: block; }
+.ab-s { font-size: .62rem; color: var(--or); text-transform: uppercase; letter-spacing: .14em; margin-top: 3px; display: block; }
+.apercu-right blockquote { font-family: var(--fd); font-style: italic; font-size: 1.4rem; color: var(--marine); border-left: 3px solid var(--or); padding-left: 1.5rem; margin: 2rem 0; line-height: 1.55; }
+.apercu-p { color: var(--doux); line-height: 1.88; margin-bottom: 1rem; }
+.apercu-vals { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; margin-top: 1.5rem; }
+.av { display: flex; align-items: flex-start; gap: 9px; }
+.av svg { width: 14px; height: 14px; stroke: var(--or); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 5px; }
+.av span { font-size: .86rem; color: var(--texte); }
+
+/* ── AVIS ── */
+.avis-section { background: var(--creme); }
+.avis-head { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 2rem; }
+.note-wrap { text-align: right; }
+.note-nb { font-family: var(--fd); font-size: 3.2rem; font-weight: 600; color: var(--marine); line-height: 1; }
+.stars { display: flex; gap: 3px; margin-top: 4px; justify-content: flex-end; }
+.av-src { font-size: .72rem; color: var(--doux); margin-top: 3px; }
+.avis-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.avc {
+  background: var(--blanc); border: 1px solid var(--bordure);
+  padding: 2rem 1.8rem; position: relative;
+}
+.av-q { font-family: var(--fd); font-size: 5rem; color: rgba(201,168,76,.12); position: absolute; top: -10px; left: 14px; line-height: 1; pointer-events: none; }
+.avc-stars { display: flex; gap: 3px; margin-bottom: 1rem; }
+.av-txt { font-size: .88rem; color: var(--doux); line-height: 1.78; margin-bottom: 1.2rem; font-style: italic; }
+.av-au { font-weight: 700; font-size: .78rem; color: var(--marine); text-transform: uppercase; letter-spacing: .06em; }
+.av-dm { font-size: .72rem; color: var(--doux); margin-top: 2px; }
+
+/* RESPONSIVE */
+@media (max-width: 1040px) {
+  .hero-card { display: none; }
+  .rapides-grid { grid-template-columns: 1fr 1fr; }
+  .apercu-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .apercu-cadre { display: none; }
+  .apercu-badge { position: static; display: inline-block; margin-top: 1rem; }
+  .avis-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .rapides-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+  .hero-tags { display: none; }
+  .apercu-vals { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="logo">
+    <span class="logo-t">Maître Sophie DONATO</span>
+    <span class="logo-s">Avocat Droit Routier — Marseille</span>
+  </a>
+  <div class="burger" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+  <nav id="nav">
+    <a href="index.html" class="active">Accueil</a>
+    <a href="infractions.html">Infractions</a>
+    <a href="permis.html">Permis</a>
+    <a href="cabinet.html">Cabinet</a>
+    <a href="honoraires.html">Honoraires</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:+33XXXXXXXXX" class="nav-tel">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+      04 XX XX XX XX
+    </a>
+    <a href="contact.html" class="nav-cta">Consultation gratuite</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-grille"></div>
+
+  <div class="hero-inner">
+    <div class="hero-alerte">
+      <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      Permis retenu ? Convocation ? Agissez sans attendre.
+    </div>
+
+    <h1>Votre permis.<br>Votre <em>liberté</em>.<br>Je les défends.</h1>
+
+    <p class="hero-sub">
+      Maître Sophie DONATO, avocate spécialisée en droit routier à Marseille, vous défend face aux infractions au code de la route, aux suspensions et annulations de permis de conduire.
+    </p>
+
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-or">
+        Consultation gratuite
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="infractions.html" class="btn-outline" style="color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.3)">
+        Voir les infractions
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-tags">
+      <div class="hero-tag"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Alcool au volant</div>
+      <div class="hero-tag"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Stupéfiants</div>
+      <div class="hero-tag"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Excès de vitesse</div>
+      <div class="hero-tag"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Permis annulé</div>
+      <div class="hero-tag"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Délit de fuite</div>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <div class="stat-nb">[X]</div>
+        <div class="stat-lbl">Années d'exercice</div>
+      </div>
+      <div>
+        <div class="stat-nb">[X]</div>
+        <div class="stat-lbl">Permis sauvegardés</div>
+      </div>
+      <div>
+        <div class="stat-nb">
+          5&thinsp;<svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="stat-lbl">Note Google</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <div class="hero-card-t">Délai critique</div>
+    <div class="hero-card-v">72 heures</div>
+    <div class="hero-card-s">pour contester une rétention de permis après contrôle</div>
+  </div>
+</section>
+
+<!-- SERVICES RAPIDES -->
+<section class="rapides">
+  <p class="s-lbl">Nos interventions</p>
+  <h2 class="s-t">Votre infraction,<br>notre <em>stratégie</em></h2>
+  <div class="rapides-grid">
+
+    <a href="infractions.html#alcool" class="rapid-card reveal">
+      <div class="ic-box">
+        <svg viewBox="0 0 24 24"><path d="M8 2h8l2 8H6L8 2z"/><path d="M6 10v8a2 2 0 002 2h8a2 2 0 002-2v-8"/><line x1="12" y1="14" x2="12" y2="18"/><line x1="9.5" y1="16" x2="14.5" y2="16"/></svg>
+      </div>
+      <h3 class="rc-titre">Alcool &amp; stupéfiants</h3>
+      <p class="rc-desc">Contrôle positif, refus de souffler, ivresse manifeste. Analyse des vices de procédure et défense devant le tribunal correctionnel.</p>
+      <span class="rc-lien">En savoir plus <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2.5"/></svg></span>
+    </a>
+
+    <a href="infractions.html#vitesse" class="rapid-card reveal">
+      <div class="ic-box">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <h3 class="rc-titre">Excès de vitesse</h3>
+      <p class="rc-desc">Grand excès de vitesse, perte de points, suspension immédiate. Contestation du radar et de la procédure de verbalisation.</p>
+      <span class="rc-lien">En savoir plus <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2.5"/></svg></span>
+    </a>
+
+    <a href="permis.html" class="rapid-card reveal">
+      <div class="ic-box">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg>
+      </div>
+      <h3 class="rc-titre">Permis suspendu</h3>
+      <p class="rc-desc">Suspension administrative ou judiciaire, courrier 48 SI, invalidation totale. Recours en référé et procédures de restitution anticipée.</p>
+      <span class="rc-lien">En savoir plus <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2.5"/></svg></span>
+    </a>
+
+    <a href="infractions.html#accident" class="rapid-card reveal">
+      <div class="ic-box">
+        <svg viewBox="0 0 24 24"><path d="M17 18a2 2 0 100 4 2 2 0 000-4zM7 18a2 2 0 100 4 2 2 0 000-4z"/><path d="M5 18H3a2 2 0 01-2-2v-5l3-6h13l2 4"/><path d="M19 18h2M15 13h6l2 5"/></svg>
+      </div>
+      <h3 class="rc-titre">Accident &amp; délit de fuite</h3>
+      <p class="rc-desc">Mise en cause, délit de fuite, blessures involontaires. Défense pénale et assistance dans les démarches assurantielles.</p>
+      <span class="rc-lien">En savoir plus <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-width="2.5"/></svg></span>
+    </a>
+
+  </div>
+</section>
+
+<!-- APERÇU CABINET -->
+<section class="apercu">
+  <div class="apercu-grid">
+    <div class="apercu-photo">
+      <div class="apercu-img">
+        <svg width="72" height="72" viewBox="0 0 24 24" fill="#1A1A2E"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+        <p class="apercu-img-note">Votre photo professionnelle</p>
+      </div>
+      <div class="apercu-cadre"></div>
+      <div class="apercu-badge">
+        <span class="ab-t">Barreau de Marseille</span>
+        <span class="ab-s">Droit routier</span>
+      </div>
+    </div>
+    <div class="apercu-right reveal">
+      <p class="s-lbl">Le Cabinet</p>
+      <h2 class="s-t">Maître Sophie<br><em>DONATO</em></h2>
+      <blockquote>"Perdre son permis, c'est parfois perdre son travail. Je me bats pour que ça n'arrive pas."</blockquote>
+      <p class="apercu-p">Inscrite au Barreau de Marseille, Maître Sophie DONATO s'est spécialisée en droit routier — un domaine technique qui croise le droit pénal et le droit administratif. Elle intervient pour tous les conducteurs confrontés à une infraction au code de la route, quelle qu'en soit la gravité.</p>
+      <div class="apercu-vals">
+        <div class="av"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Double compétence pénal &amp; administratif</span></div>
+        <div class="av"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Réponse sous 24h garantie</span></div>
+        <div class="av"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Recherche systématique des nullités</span></div>
+        <div class="av"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Intervention PACA &amp; national</span></div>
+      </div>
+      <a href="cabinet.html" class="btn-marine" style="margin-top:2rem">
+        Découvrir le cabinet
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div>
+    <p class="cta-band-t">Permis retenu ou convocation ?<br><em>N'attendez pas.</em></p>
+    <p class="cta-band-sub">Les délais de recours sont stricts en droit routier. Chaque heure compte.</p>
+  </div>
+  <div class="cta-band-a">
+    <a href="tel:+33XXXXXXXXX" class="tel-big">
+      <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+      04 XX XX XX XX
+    </a>
+    <a href="contact.html" class="btn-or">Consulter gratuitement</a>
+  </div>
+</div>
+
+<!-- AVIS -->
+<section class="avis-section">
+  <div class="avis-head">
+    <div>
+      <p class="s-lbl">Témoignages</p>
+      <h2 class="s-t">Ils ont <em>récupéré</em><br>leur permis</h2>
+    </div>
+    <div class="note-wrap">
+      <div class="note-nb">[X.X]</div>
+      <div class="stars">
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <svg class="star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div class="av-src">Avis Google vérifiés</div>
+    </div>
+  </div>
+  <div class="avis-grid">
+    <div class="avc reveal">
+      <div class="av-q">"</div>
+      <div class="avc-stars"><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="av-txt">Permis suspendu après un contrôle alcool. Maître DONATO a trouvé un vice de procédure dans le PV et j'ai obtenu la relaxe. Résultat inespéré, je ne pensais pas avoir de recours.</p>
+      <div class="av-au">Marc D.</div><div class="av-dm">Alcool au volant · Marseille · 2024</div>
+    </div>
+    <div class="avc reveal">
+      <div class="av-q">"</div>
+      <div class="avc-stars"><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="av-txt">Courrier 48 SI reçu, permis invalidé. J'ai contacté le cabinet en urgence et Maître DONATO a déposé un recours immédiatement. Procédure gagnée, mes points ont été restitués.</p>
+      <div class="av-au">Karim B.</div><div class="av-dm">Invalidation de permis · 2024</div>
+    </div>
+    <div class="avc reveal">
+      <div class="av-q">"</div>
+      <div class="avc-stars"><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+      <p class="av-txt">Grand excès de vitesse sur l'A7. Maître DONATO a obtenu une peine aménagée sans suspension. Professionnalisme et humanité remarquables. Je recommande sans hésitation.</p>
+      <div class="av-au">Sandrine M.</div><div class="av-dm">Excès de vitesse · Aix-en-Provence · 2023</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="logo-t">Maître Sophie DONATO</span>
+      <span class="logo-s">Avocat Droit Routier — Barreau de Marseille</span>
+      <p>Spécialisée en droit routier, Maître DONATO défend vos droits face aux infractions au code de la route, suspensions et annulations de permis à Marseille et dans toute la région PACA.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <a href="index.html">Accueil</a>
+      <a href="infractions.html">Infractions</a>
+      <a href="permis.html">Permis de conduire</a>
+      <a href="cabinet.html">Le cabinet</a>
+      <a href="honoraires.html">Honoraires</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Infractions</h4>
+      <a href="infractions.html#alcool">Alcool au volant</a>
+      <a href="infractions.html#stupefiants">Stupéfiants</a>
+      <a href="infractions.html#vitesse">Excès de vitesse</a>
+      <a href="infractions.html#accident">Accident / fuite</a>
+      <a href="permis.html">Permis annulé</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>[Adresse complète]<br>13006 Marseille</p>
+      <a href="tel:+33XXXXXXXXX">04 XX XX XX XX</a>
+      <a href="mailto:contact@donato-avocat.fr">contact@donato-avocat.fr</a>
+      <p style="margin-top:.5rem">Lun–Ven : 9h–18h30</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 Maître Sophie DONATO — Avocat au Barreau de Marseille</div>
+    <div class="footer-legal">
+      <a href="#">Mentions légales</a>
+      <a href="#">Confidentialité</a>
+      <a href="#">Cookies</a>
+      <a href="https://www.barreau-marseille.avocat.fr" target="_blank" rel="noopener">Barreau de Marseille</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

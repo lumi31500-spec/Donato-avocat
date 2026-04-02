@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Maître Sophie DONATO, Avocat Droit Routier Marseille</title>
+<meta name="description" content="Contactez Maître Sophie DONATO, avocate en droit routier à Marseille. Consultation gratuite, réponse sous 24h. Cabinet au 13006 Marseille.">
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 5rem; margin-top: 3rem; }
+.ci { display: flex; gap: 1rem; margin-bottom: 2rem; align-items: flex-start; }
+.ci-ic { width: 44px; height: 44px; flex-shrink: 0; border: 1px solid var(--bordure); display: flex; align-items: center; justify-content: center; }
+.ci-ic svg { width: 18px; height: 18px; stroke: var(--marine); stroke-width: 1.6; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.ci-l { font-size: .67rem; text-transform: uppercase; letter-spacing: .16em; color: var(--or); margin-bottom: 3px; }
+.ci-v { font-size: .93rem; color: var(--texte); }
+.ci-v a { color: var(--marine); text-decoration: none; font-weight: 700; }
+.ci-v a:hover { color: var(--or); }
+.hrs { border-top: 1px solid var(--bordure); padding-top: 1.5rem; margin-top: 1.5rem; }
+.hr-t { font-size: .67rem; text-transform: uppercase; letter-spacing: .16em; color: var(--or); margin-bottom: .9rem; }
+.hr-l { display: flex; justify-content: space-between; font-size: .84rem; color: var(--doux); padding: .4rem 0; border-bottom: 1px solid var(--bordure); }
+.urgence-box { background: var(--marine); padding: 1.8rem; margin-top: 2rem; }
+.ub-t { font-size: .67rem; text-transform: uppercase; letter-spacing: .16em; color: var(--or); margin-bottom: .6rem; }
+.ub-v { font-family: var(--fd); font-size: 1.1rem; color: var(--blanc); font-weight: 400; line-height: 1.5; }
+.cf { display: flex; flex-direction: column; gap: 1.2rem; }
+.f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.fg { display: flex; flex-direction: column; gap: .4rem; }
+.fl { font-size: .68rem; text-transform: uppercase; letter-spacing: .13em; color: var(--doux); }
+.fi, .fs, .ft {
+  background: var(--blanc); border: 1px solid var(--bordure);
+  color: var(--texte); padding: 12px 15px;
+  font-family: var(--fb); font-size: .9rem;
+  outline: none; transition: border-color .2s; width: 100%; appearance: none;
+}
+.fi::placeholder, .ft::placeholder { color: rgba(0,0,0,.28); }
+.fi:focus, .fs:focus, .ft:focus { border-color: var(--or); }
+.ft { resize: vertical; min-height: 130px; }
+.f-rgpd { display: flex; align-items: flex-start; gap: 10px; font-size: .77rem; color: var(--doux); line-height: 1.65; }
+.f-rgpd input { margin-top: 3px; flex-shrink: 0; accent-color: var(--or); }
+.btn-submit { background: var(--marine); color: var(--blanc); border: none; padding: 15px 32px; font-family: var(--fb); font-size: .8rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; cursor: pointer; align-self: flex-start; display: flex; align-items: center; gap: 8px; transition: background .2s, transform .2s; }
+.btn-submit svg { width: 14px; height: 14px; stroke: var(--blanc); fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+.btn-submit:hover { background: var(--marine-mid); transform: translateY(-1px); }
+#form-success { display: none; color: #2a7a4b; font-size: .9rem; font-style: italic; margin-top: .5rem; padding: .8rem 1rem; background: #e8f5ed; border-left: 3px solid #2a7a4b; }
+@media(max-width:1040px){ .contact-grid{grid-template-columns:1fr;} .f-row{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo"><span class="logo-t">Maître Sophie DONATO</span><span class="logo-s">Avocat Droit Routier — Marseille</span></a>
+  <div class="burger" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></div>
+  <nav id="nav">
+    <a href="index.html">Accueil</a><a href="infractions.html">Infractions</a><a href="permis.html">Permis</a><a href="cabinet.html">Cabinet</a><a href="honoraires.html">Honoraires</a><a href="contact.html" class="active">Contact</a>
+    <a href="tel:+33XXXXXXXXX" class="nav-tel"><svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>04 XX XX XX XX</a>
+    <a href="contact.html" class="nav-cta">Consultation gratuite</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Contact</span></div>
+    <p class="s-lbl">Prenons contact</p>
+    <h1 class="s-t">Décrivez votre <em>situation</em></h1>
+    <p>Consultation gratuite. Réponse sous 24h. Chaque dossier est étudié personnellement par Maître DONATO.</p>
+  </div>
+</div>
+
+<section>
+  <div class="contact-grid">
+
+    <div class="reveal">
+      <p class="s-lbl">Coordonnées</p>
+      <h2 class="s-t" style="font-size:1.8rem">Cabinet<br><em>DONATO</em></h2>
+
+      <div class="ci">
+        <div class="ci-ic"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="ci-l">Adresse</div><div class="ci-v">[Votre adresse complète]<br>13006 Marseille</div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg></div>
+        <div><div class="ci-l">Téléphone</div><div class="ci-v"><a href="tel:+33XXXXXXXXX">04 XX XX XX XX</a></div></div>
+      </div>
+      <div class="ci">
+        <div class="ci-ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><div class="ci-l">Email</div><div class="ci-v"><a href="mailto:contact@donato-avocat.fr">contact@donato-avocat.fr</a></div></div>
+      </div>
+
+      <div class="hrs">
+        <div class="hr-t">Horaires d'ouverture</div>
+        <div class="hr-l"><span>Lundi – Vendredi</span><span>9h00 – 12h30 / 14h – 18h30</span></div>
+        <div class="hr-l"><span>Samedi</span><span>Sur rendez-vous</span></div>
+        <div class="hr-l"><span>Dimanche</span><span>Fermé</span></div>
+        <p style="font-size:.76rem;color:var(--doux);font-style:italic;margin-top:.8rem;">Réception sur rendez-vous uniquement</p>
+      </div>
+
+      <div class="urgence-box">
+        <div class="ub-t">Situation urgente ?</div>
+        <div class="ub-v">Permis retenu lors d'un contrôle ou convocation reçue ? Appelez directement le cabinet — nous traitons les dossiers urgents en priorité.</div>
+      </div>
+    </div>
+
+    <form class="cf reveal" id="form-contact" novalidate>
+      <p class="s-lbl">Formulaire de contact</p>
+      <div class="f-row">
+        <div class="fg"><label class="fl" for="prenom">Prénom *</label><input class="fi" type="text" id="prenom" placeholder="Jean" required></div>
+        <div class="fg"><label class="fl" for="nom">Nom *</label><input class="fi" type="text" id="nom" placeholder="Dupont" required></div>
+      </div>
+      <div class="f-row">
+        <div class="fg"><label class="fl" for="email">Email *</label><input class="fi" type="email" id="email" placeholder="vous@email.fr" required></div>
+        <div class="fg"><label class="fl" for="tel">Téléphone</label><input class="fi" type="tel" id="tel" placeholder="06 XX XX XX XX"></div>
+      </div>
+      <div class="fg">
+        <label class="fl" for="infraction">Type d'infraction *</label>
+        <select class="fs" id="infraction" required>
+          <option value="" disabled selected>Sélectionnez votre situation</option>
+          <option>Alcool au volant</option>
+          <option>Stupéfiants au volant</option>
+          <option>Excès de vitesse</option>
+          <option>Grand excès de vitesse (+50 km/h)</option>
+          <option>Permis suspendu / annulé</option>
+          <option>Invalidation de permis (courrier 48 SI)</option>
+          <option>Accident / délit de fuite</option>
+          <option>Refus d'obtempérer</option>
+          <option>Conduite sans permis / assurance</option>
+          <option>Autre infraction</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label class="fl" for="message">Décrivez votre situation *</label>
+        <textarea class="ft" id="message" placeholder="Date de l'infraction, type de contrôle, convocation reçue, permis retenu... Plus vous êtes précis, mieux nous pouvons analyser votre dossier." required></textarea>
+      </div>
+      <label class="f-rgpd">
+        <input type="checkbox" id="rgpd" required>
+        J'accepte que ces informations soient traitées dans le cadre de ma demande de consultation, conformément à la politique de confidentialité du cabinet. Les échanges avec un avocat sont couverts par le secret professionnel.
+      </label>
+      <button type="submit" class="btn-submit">
+        Envoyer ma demande
+        <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+      <div id="form-success">Votre message a bien été envoyé. Maître DONATO vous répondra dans les 24h.</div>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="logo-t">Maître Sophie DONATO</span><span class="logo-s">Avocat Droit Routier — Barreau de Marseille</span><p>Spécialisée en droit routier à Marseille et dans toute la région PACA.</p></div>
+    <div class="footer-col"><h4>Pages</h4><a href="index.html">Accueil</a><a href="infractions.html">Infractions</a><a href="permis.html">Permis</a><a href="cabinet.html">Cabinet</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Infractions</h4><a href="infractions.html#alcool">Alcool au volant</a><a href="infractions.html#stupefiants">Stupéfiants</a><a href="infractions.html#vitesse">Excès de vitesse</a><a href="infractions.html#accident">Accident / fuite</a></div>
+    <div class="footer-col"><h4>Contact</h4><p>[Adresse] 13006 Marseille</p><a href="tel:+33XXXXXXXXX">04 XX XX XX XX</a><a href="mailto:contact@donato-avocat.fr">contact@donato-avocat.fr</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 Maître Sophie DONATO — Avocat au Barreau de Marseille</div>
+    <div class="footer-legal"><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

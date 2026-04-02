@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Permis de Conduire — Maître Sophie DONATO, Avocat Marseille</title>
+<meta name="description" content="Récupérez votre permis de conduire à Marseille. Recours 48 SI, suspension, invalidation, référé. Maître Sophie DONATO, avocate spécialisée.">
+<link rel="stylesheet" href="style.css">
+<style>
+.permis-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 5rem; align-items: start; margin-top: 3rem; }
+.etapes { display: flex; flex-direction: column; gap: 1.5px; }
+.etape { background: var(--blanc); padding: 1.8rem 2rem; display: flex; align-items: flex-start; gap: 1.5rem; border-left: 3px solid transparent; transition: border-color .2s, background .2s; }
+.etape:hover { border-left-color: var(--or); }
+.etape-nb { font-family: var(--fd); font-size: 2.2rem; font-weight: 600; color: rgba(201,168,76,.25); line-height: 1; flex-shrink: 0; min-width: 2.2rem; }
+.etape h3 { font-family: var(--fd); font-size: 1.15rem; font-weight: 600; color: var(--marine); margin-bottom: .4rem; }
+.etape p { font-size: .86rem; color: var(--doux); line-height: 1.72; }
+
+.situations-permis { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 3rem; }
+.sp-card { background: var(--blanc); padding: 2.2rem 2rem; border-top: 2px solid transparent; transition: border-color .25s; }
+.sp-card:hover { border-top-color: var(--or); }
+.sp-titre { font-family: var(--fd); font-size: 1.3rem; font-weight: 600; color: var(--marine); margin: 1rem 0 .6rem; }
+.sp-txt { font-size: .86rem; color: var(--doux); line-height: 1.75; margin-bottom: 1.2rem; }
+.sp-note { font-size: .78rem; color: var(--or); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; display: flex; align-items: center; gap: 5px; }
+.sp-note svg { width: 11px; height: 11px; stroke: var(--or); fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.5; }
+
+.alerte-48si {
+  background: var(--marine); padding: 3rem 3.5rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  margin: 0 8% 0;
+}
+.a48-titre { font-family: var(--fd); font-size: 2rem; font-weight: 400; color: var(--blanc); margin-bottom: 1rem; }
+.a48-titre em { font-style: italic; color: var(--or); }
+.a48-txt { color: rgba(255,255,255,.6); line-height: 1.85; margin-bottom: 1.5rem; font-size: .95rem; }
+.a48-right { border-left: 1px solid rgba(255,255,255,.1); padding-left: 3rem; }
+.a48-stat { font-family: var(--fd); font-size: 3.5rem; font-weight: 600; color: var(--or); line-height: 1; }
+.a48-stat-lbl { font-size: .72rem; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .1em; margin-top: 4px; }
+.a48-detail { font-size: .84rem; color: rgba(255,255,255,.5); margin-top: 1.5rem; line-height: 1.7; }
+
+@media(max-width:1040px){
+  .permis-grid{grid-template-columns:1fr;}
+  .situations-permis{grid-template-columns:1fr 1fr;}
+  .alerte-48si{grid-template-columns:1fr; margin:0 5%; padding:2.5rem;}
+  .a48-right{border-left:none;border-top:1px solid rgba(255,255,255,.1);padding-left:0;padding-top:2rem;}
+}
+@media(max-width:640px){.situations-permis{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo"><span class="logo-t">Maître Sophie DONATO</span><span class="logo-s">Avocat Droit Routier — Marseille</span></a>
+  <div class="burger" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></div>
+  <nav id="nav">
+    <a href="index.html">Accueil</a><a href="infractions.html">Infractions</a><a href="permis.html" class="active">Permis</a><a href="cabinet.html">Cabinet</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a>
+    <a href="tel:+33XXXXXXXXX" class="nav-tel"><svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>04 XX XX XX XX</a>
+    <a href="contact.html" class="nav-cta">Consultation gratuite</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Permis de conduire</span></div>
+    <p class="s-lbl">Volet administratif &amp; pénal</p>
+    <h1 class="s-t">Récupérer son <em>permis</em></h1>
+    <p>La perte du permis a des conséquences directes sur votre vie professionnelle et personnelle. Maître DONATO agit sur les deux fronts — pénal et administratif — pour vous permettre de retrouver votre liberté de circuler au plus vite.</p>
+  </div>
+</div>
+
+<!-- Alerte 48 SI -->
+<div style="padding:4rem 0">
+  <div class="alerte-48si">
+    <div>
+      <p class="s-lbl" style="color:rgba(201,168,76,.7)">Courrier recommandé reçu ?</p>
+      <h2 class="a48-titre">Le courrier <em>48 SI</em></h2>
+      <p class="a48-txt">Si vous avez reçu un courrier recommandé du Ministère de l'Intérieur intitulé « 48 SI », votre permis est sur le point d'être invalidé pour solde de points nul. Le délai pour agir est très court. Contactez le cabinet immédiatement.</p>
+      <a href="contact.html" class="btn-or">Agir maintenant <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="a48-right">
+      <div class="a48-stat">2 mois</div>
+      <div class="a48-stat-lbl">délai pour contester après le 48 SI</div>
+      <p class="a48-detail">Passé ce délai, le recours devient irrecevable. Ne tardez pas à consulter Maître DONATO pour évaluer la validité des retraits de points ayant conduit à l'invalidation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 3 situations -->
+<section style="background:var(--creme)">
+  <p class="s-lbl">Vos situations</p>
+  <h2 class="s-t">Quel est votre cas ?</h2>
+  <div class="situations-permis">
+
+    <div class="sp-card reveal">
+      <div class="ic-box"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/><line x1="6" y1="15" x2="10" y2="15"/></svg></div>
+      <h3 class="sp-titre">Suspension administrative</h3>
+      <p class="sp-txt">Votre permis a été retenu lors d'un contrôle (alcool, vitesse, stupéfiants) et vous avez reçu un avis de suspension préfectorale. Une procédure de référé peut permettre d'en obtenir la suspension dans l'attente du jugement.</p>
+      <span class="sp-note"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Référé possible sous 48h</span>
+    </div>
+
+    <div class="sp-card reveal">
+      <div class="ic-box"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3 class="sp-titre">Suspension judiciaire</h3>
+      <p class="sp-txt">Le tribunal a prononcé une suspension de votre permis à titre de peine. Maître DONATO peut solliciter un aménagement, une suspension partielle ou un permis blanc selon votre activité professionnelle.</p>
+      <span class="sp-note"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Permis blanc professionnel</span>
+    </div>
+
+    <div class="sp-card reveal">
+      <div class="ic-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
+      <h3 class="sp-titre">Invalidation (solde nul)</h3>
+      <p class="sp-txt">Votre capital de points est tombé à zéro et votre permis a été invalidé. Recours au fond contre les retraits de points abusifs, vérification du relevé SNPC, contestation des notifications irrégulières.</p>
+      <span class="sp-note"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Recours au fond possible</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Étapes -->
+<section>
+  <div class="permis-grid">
+    <div>
+      <p class="s-lbl">Méthode</p>
+      <h2 class="s-t">Notre <em>démarche</em></h2>
+      <p style="color:var(--doux);line-height:1.85;margin-bottom:1.5rem;">Maître DONATO construit une stratégie de défense propre au droit routier : relevé intégral d'information, analyse de chaque retrait de point, identification des nullités de procédure.</p>
+      <p style="color:var(--doux);line-height:1.85;margin-bottom:2rem;">Le cabinet intervient devant le Tribunal administratif de Marseille pour les recours contre les décisions préfectorales, et devant les juridictions judiciaires pour les suspensions prononcées par un tribunal.</p>
+      <a href="contact.html" class="btn-marine">Analyser mon dossier <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="etapes">
+      <div class="etape reveal"><div class="etape-nb">01</div><div><h3>Analyse du relevé de points</h3><p>Demande du relevé intégral SNPC, vérification de chaque retrait, identification des notifications irrégulières ou prescrites.</p></div></div>
+      <div class="etape reveal"><div class="etape-nb">02</div><div><h3>Examen des procès-verbaux</h3><p>Étude des PV ayant entraîné les retraits de points : régularité, mentions obligatoires, information sur la perte de points.</p></div></div>
+      <div class="etape reveal"><div class="etape-nb">03</div><div><h3>Stratégie de recours</h3><p>Recours au fond ou en référé, selon l'urgence et la nature de la décision (administrative ou judiciaire).</p></div></div>
+      <div class="etape reveal"><div class="etape-nb">04</div><div><h3>Procédure et audience</h3><p>Dépôt des pièces, rédaction du mémoire, représentation devant la juridiction compétente (TA ou tribunal judiciaire).</p></div></div>
+      <div class="etape reveal"><div class="etape-nb">05</div><div><h3>Restitution &amp; suivi</h3><p>En cas de succès, accompagnement pour la restitution effective du permis et les démarches post-audience.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band">
+  <div><p class="cta-band-t">Votre permis est votre<br><em>outil de travail.</em></p><p class="cta-band-sub">Ne le perdez pas sans vous défendre. Consultation gratuite.</p></div>
+  <div class="cta-band-a">
+    <a href="tel:+33XXXXXXXXX" class="tel-big"><svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>04 XX XX XX XX</a>
+    <a href="contact.html" class="btn-or">Consulter gratuitement</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="logo-t">Maître Sophie DONATO</span><span class="logo-s">Avocat Droit Routier — Barreau de Marseille</span><p>Spécialisée en droit routier à Marseille et dans toute la région PACA.</p></div>
+    <div class="footer-col"><h4>Pages</h4><a href="index.html">Accueil</a><a href="infractions.html">Infractions</a><a href="permis.html">Permis</a><a href="cabinet.html">Cabinet</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Permis</h4><a href="#suspension">Suspension administrative</a><a href="#judiciaire">Suspension judiciaire</a><a href="#invalidation">Invalidation</a><a href="#">Courrier 48 SI</a></div>
+    <div class="footer-col"><h4>Contact</h4><p>[Adresse] 13006 Marseille</p><a href="tel:+33XXXXXXXXX">04 XX XX XX XX</a><a href="mailto:contact@donato-avocat.fr">contact@donato-avocat.fr</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 Maître Sophie DONATO — Avocat au Barreau de Marseille</div>
+    <div class="footer-legal"><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

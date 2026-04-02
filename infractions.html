@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infractions Routières — Maître Sophie DONATO, Avocat Marseille</title>
+<meta name="description" content="Défense de toutes les infractions routières à Marseille : alcool, stupéfiants, excès de vitesse, accident, délit de fuite. Maître Sophie DONATO.">
+<link rel="stylesheet" href="style.css">
+<style>
+.infr-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; margin-top: 3rem; }
+.infr-card {
+  background: var(--blanc); padding: 3rem 2.5rem;
+  border-left: 3px solid transparent;
+  transition: border-color .25s, box-shadow .25s;
+  scroll-margin-top: 100px;
+}
+.infr-card:hover { border-left-color: var(--or); box-shadow: var(--shadow); }
+.infr-head { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.5rem; gap: 1rem; }
+.infr-titre { font-family: var(--fd); font-size: 1.6rem; font-weight: 600; color: var(--marine); margin-top: .8rem; }
+.infr-txt { color: var(--doux); line-height: 1.85; margin-bottom: 1rem; }
+.infr-liste { list-style: none; display: flex; flex-direction: column; gap: .5rem; margin: 1.2rem 0 1.5rem; }
+.infr-liste li { display: flex; align-items: flex-start; gap: 9px; font-size: .88rem; color: var(--texte); }
+.infr-liste li svg { width: 13px; height: 13px; stroke: var(--or); stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; margin-top: 4px; }
+.sanctions {
+  background: var(--creme); padding: 1rem 1.3rem; margin-top: 1.2rem;
+  border-left: 2px solid var(--or);
+}
+.sanctions-t { font-size: .65rem; text-transform: uppercase; letter-spacing: .14em; color: var(--or); margin-bottom: .4rem; font-weight: 700; }
+.sanctions-v { font-size: .84rem; color: var(--texte); line-height: 1.65; }
+@media(max-width:900px){ .infr-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<header>
+  <a href="index.html" class="logo"><span class="logo-t">Maître Sophie DONATO</span><span class="logo-s">Avocat Droit Routier — Marseille</span></a>
+  <div class="burger" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></div>
+  <nav id="nav">
+    <a href="index.html">Accueil</a><a href="infractions.html" class="active">Infractions</a><a href="permis.html">Permis</a><a href="cabinet.html">Cabinet</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a>
+    <a href="tel:+33XXXXXXXXX" class="nav-tel"><svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>04 XX XX XX XX</a>
+    <a href="contact.html" class="nav-cta">Consultation gratuite</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Accueil</a><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg><span>Infractions routières</span></div>
+    <p class="s-lbl">Défense pénale &amp; administrative</p>
+    <h1 class="s-t">Infractions <em>routières</em></h1>
+    <p>Maître DONATO analyse votre dossier dans sa globalité — procès-verbal, méthode de contrôle, droits de la défense — pour construire la stratégie la plus adaptée à votre situation.</p>
+  </div>
+</div>
+
+<section style="background:var(--creme)">
+  <div class="infr-grid">
+
+    <div class="infr-card reveal" id="alcool">
+      <div class="infr-head">
+        <div class="ic-box"><svg viewBox="0 0 24 24"><path d="M8 2h8l2 8H6L8 2z"/><path d="M6 10v8a2 2 0 002 2h8a2 2 0 002-2v-8"/><line x1="12" y1="14" x2="12" y2="18"/><line x1="9.5" y1="16" x2="14.5" y2="16"/></svg></div>
+        <span class="badge badge-anth"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Délai court</span>
+      </div>
+      <h2 class="infr-titre">Alcool au volant</h2>
+      <p class="infr-txt">La conduite sous l'empire d'un état alcoolique est l'une des infractions les plus fréquentes. Le taux légal est de 0,5 g/l de sang (0,2 g/l pour les conducteurs novices). Au-delà de 0,8 g/l, c'est un délit passible du tribunal correctionnel.</p>
+      <p class="infr-txt">Maître DONATO examine systématiquement la régularité du contrôle : fonctionnement de l'éthylomètre, certificat de vérification, mentions obligatoires du PV, respect des droits de la personne contrôlée.</p>
+      <ul class="infr-liste">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Contestation de la procédure de contrôle</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Analyse des vices de procédure et nullités</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Défense devant le tribunal correctionnel</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Demande de sursis à exécution de la suspension</li>
+      </ul>
+      <div class="sanctions"><div class="sanctions-t">Sanctions encourues</div><div class="sanctions-v">Amende jusqu'à 4 500 €, suspension jusqu'à 3 ans, annulation possible, 6 points retirés, peines complémentaires.</div></div>
+      <a href="contact.html" class="btn-or" style="margin-top:1.5rem">Me défendre <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <div class="infr-card reveal" id="stupefiants">
+      <div class="infr-head">
+        <div class="ic-box"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <span class="badge badge-anth"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Délai court</span>
+      </div>
+      <h2 class="infr-titre">Stupéfiants au volant</h2>
+      <p class="infr-txt">La conduite après usage de stupéfiants est un délit pénal distinct de l'usage, systématiquement poursuivi après un dépistage salivaire positif. Les méthodes de dépistage sont encadrées strictement et peuvent être contestées.</p>
+      <p class="infr-txt">Le cabinet vérifie la régularité du test salivaire de dépistage, la validité de l'analyse sanguine de confirmation, le respect de la chaîne de garde des prélèvements et les conditions du contrôle.</p>
+      <ul class="infr-liste">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Contestation de la validité du test salivaire</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Analyse des conditions de prélèvement sanguin</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Défense en cas de cumul alcool + stupéfiants</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Assistance dès la garde à vue</li>
+      </ul>
+      <div class="sanctions"><div class="sanctions-t">Sanctions encourues</div><div class="sanctions-v">Amende jusqu'à 4 500 €, 2 ans d'emprisonnement, suspension jusqu'à 3 ans, 6 points retirés.</div></div>
+      <a href="contact.html" class="btn-or" style="margin-top:1.5rem">Me défendre <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <div class="infr-card reveal" id="vitesse">
+      <div class="infr-head">
+        <div class="ic-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <span class="badge badge-or">Important</span>
+      </div>
+      <h2 class="infr-titre">Excès de vitesse</h2>
+      <p class="infr-txt">Le grand excès de vitesse (dépassement de 50 km/h ou plus) est un délit pénal entraînant une rétention immédiate du permis. Même les excès moins importants peuvent priver le conducteur de ses derniers points.</p>
+      <p class="infr-txt">Le cabinet analyse la conformité du radar (homologation, vérification périodique), la régularité de la signalisation, les mentions du procès-verbal, et conteste les relevés sur tout vice susceptible d'entraîner la nullité.</p>
+      <ul class="infr-liste">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Vérification de l'homologation du radar</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Contestation de la signalisation routière</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Réclamation du relevé intégral de points</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Défense devant le tribunal de police ou correctionnel</li>
+      </ul>
+      <div class="sanctions"><div class="sanctions-t">Grand excès de vitesse (+50 km/h)</div><div class="sanctions-v">Amende jusqu'à 3 750 €, 3 mois de prison possibles, suspension jusqu'à 3 ans, 6 points retirés, confiscation du véhicule possible.</div></div>
+      <a href="contact.html" class="btn-or" style="margin-top:1.5rem">Me défendre <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <div class="infr-card reveal" id="accident">
+      <div class="infr-head">
+        <div class="ic-box"><svg viewBox="0 0 24 24"><path d="M17 18a2 2 0 100 4 2 2 0 000-4zM7 18a2 2 0 100 4 2 2 0 000-4z"/><path d="M5 18H3a2 2 0 01-2-2v-5l3-6h13l2 4"/><path d="M19 18h2M15 13h6l2 5"/></svg></div>
+        <span class="badge badge-anth"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Délai court</span>
+      </div>
+      <h2 class="infr-titre">Accident &amp; délit de fuite</h2>
+      <p class="infr-txt">En cas d'accident corporel, les enjeux sont considérables : blessures involontaires, homicide involontaire, délit de fuite. Ces infractions peuvent entraîner de lourdes peines d'emprisonnement et l'annulation définitive du permis.</p>
+      <p class="infr-txt">Maître DONATO intervient dès la garde à vue pour protéger vos droits, analyse les rapports d'expertise, la causalité des blessures et assure votre défense devant les juridictions pénales tout en coordonnant avec votre assureur.</p>
+      <ul class="infr-liste">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Assistance immédiate dès la garde à vue</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Analyse des expertises accidentologiques</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Défense pour blessures ou homicide involontaire</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Coordination avec les assurances</li>
+      </ul>
+      <div class="sanctions"><div class="sanctions-t">Sanctions encourues</div><div class="sanctions-v">Délit de fuite : 3 ans, 75 000 €, annulation permis. Blessures involontaires aggravées : jusqu'à 5 ans d'emprisonnement.</div></div>
+      <a href="contact.html" class="btn-or" style="margin-top:1.5rem">Me défendre <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <div class="infr-card reveal" id="autres">
+      <div class="infr-head">
+        <div class="ic-box"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <span class="badge badge-or">Important</span>
+      </div>
+      <h2 class="infr-titre">Autres infractions</h2>
+      <p class="infr-txt">Au-delà des infractions majeures, de nombreuses situations quotidiennes peuvent menacer votre permis ou entraîner des poursuites pénales : téléphone au volant, refus d'obtempérer, conduite sans permis ou sans assurance.</p>
+      <ul class="infr-liste">
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Téléphone au volant (perte de 3 points)</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Refus d'obtempérer (délit pénal)</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Conduite sans permis ou sans assurance</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Non-respect de stop, de priorité, sens interdit</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Conduite malgré suspension ou annulation</li>
+      </ul>
+      <div class="sanctions"><div class="sanctions-t">Conduite sans permis</div><div class="sanctions-v">1 an d'emprisonnement, 15 000 € d'amende, confiscation du véhicule possible.</div></div>
+      <a href="contact.html" class="btn-or" style="margin-top:1.5rem">Me défendre <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+    <div class="infr-card reveal" style="background:var(--marine);border-left-color:var(--or) !important; display:flex; flex-direction:column; justify-content:center;">
+      <p class="s-lbl" style="color:rgba(201,168,76,.7)">Pas votre infraction ?</p>
+      <h2 class="s-t" style="color:var(--blanc)">Votre situation est <em>unique</em></h2>
+      <p style="color:rgba(255,255,255,.58);line-height:1.85;margin-bottom:2rem;">Chaque dossier est différent. Maître DONATO analyse votre situation personnellement et vous propose une consultation gratuite pour évaluer vos recours.</p>
+      <a href="contact.html" class="btn-or">Analyser mon dossier <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-band">
+  <div><p class="cta-band-t">Une question sur<br><em>votre infraction ?</em></p><p class="cta-band-sub">Consultation gratuite. Réponse sous 24h.</p></div>
+  <div class="cta-band-a">
+    <a href="tel:+33XXXXXXXXX" class="tel-big"><svg viewBox="0 0 24 24" fill="none" stroke="var(--or)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>04 XX XX XX XX</a>
+    <a href="contact.html" class="btn-or">Consulter gratuitement</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="logo-t">Maître Sophie DONATO</span><span class="logo-s">Avocat Droit Routier — Barreau de Marseille</span><p>Spécialisée en droit routier à Marseille et dans toute la région PACA.</p></div>
+    <div class="footer-col"><h4>Pages</h4><a href="index.html">Accueil</a><a href="infractions.html">Infractions</a><a href="permis.html">Permis</a><a href="cabinet.html">Cabinet</a><a href="honoraires.html">Honoraires</a><a href="contact.html">Contact</a></div>
+    <div class="footer-col"><h4>Infractions</h4><a href="#alcool">Alcool au volant</a><a href="#stupefiants">Stupéfiants</a><a href="#vitesse">Excès de vitesse</a><a href="#accident">Accident / fuite</a><a href="#autres">Autres infractions</a></div>
+    <div class="footer-col"><h4>Contact</h4><p>[Adresse] 13006 Marseille</p><a href="tel:+33XXXXXXXXX">04 XX XX XX XX</a><a href="mailto:contact@donato-avocat.fr">contact@donato-avocat.fr</a></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 Maître Sophie DONATO — Avocat au Barreau de Marseille</div>
+    <div class="footer-legal"><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
